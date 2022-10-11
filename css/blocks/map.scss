@@ -1,0 +1,68 @@
+.map {
+	position: relative;	
+}
+
+.yandex-map {
+	position: absolute;	
+	top: 0;
+	left: 0;
+	right: 0;	
+	bottom: 60px;
+}
+
+.footer {
+	background-color: #111111;
+	color: #ffffff;
+	height: 60px;	
+	position: absolute;	
+	bottom: 0;	
+	left: 0;	
+	right: 0;	
+	padding-top: 10px;
+}
+
+.footer__content {
+	@extend %clearfix;
+}
+
+.footer__left,
+.footer__right {
+	width: 50%;	
+	float: left;	
+}
+
+.footer__right {
+	text-align: right;
+	padding-top: 9px;
+}
+
+.footer__adress {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.footer__tel {
+	font-size: 14px;
+	color: $orange;
+	font-weight: 600;
+}
+
+.socials__item {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 10px;
+}
+
+.socials__link {
+  display: inline-block;
+  max-width: 23px;
+  max-height: 23px;
+  opacity: .3;
+  -webkit-transition: .3s;
+  transition: .3s;
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}

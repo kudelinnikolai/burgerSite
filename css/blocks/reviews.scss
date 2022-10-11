@@ -1,0 +1,124 @@
+.reviews {
+	background: #d5d5d5;
+}
+
+.reviews__list {
+	height: 100%;
+	@extend %clearfix;
+}
+
+.review__item {
+	height: 50%;
+	width: 25%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		.review__content {
+			transform: scale(1);
+			opacity: 1;
+  		filter: blur(0px);
+		}
+
+		.review__pic {
+			transform: scale(1.1);
+			transition: 0.8s;
+		}
+	}
+}
+
+.review__pic {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	filter: grayscale(100%);
+	z-index: 1;
+}
+
+.review__content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(20, 20, 20, 0.7);
+	z-index: 2;
+	transform: scale(0.1);
+	opacity: 0;
+	transition: 0.3s;
+  filter: blur(50px);
+  padding: 17% 12% 0;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.review__name {
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	font-family: 'gagalin', arial, sans-serif;
+}
+
+.review__text{
+	margin-bottom: 13px;
+	font-weight: 300;
+
+}
+
+.review__details{
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #2f3234;
+  border-radius: 5px;
+	padding: 8px 12px;
+	font-size: 12px;
+	display: inline-block;
+	font-weight: 500;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: #1f2122;
+	}
+}
+
+.full-review {
+	padding: 25px 20px;
+	position: relative;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+.full-review__cancel {
+	width: 15px;
+	height: 15px;
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	opacity: .7;
+	-webkit-transition: .3s;
+	transition: .3s;
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}
+
+.full-review__name {
+    font-family: 'Gagalin', arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.full-review__content {
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+}

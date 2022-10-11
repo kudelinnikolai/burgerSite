@@ -1,0 +1,105 @@
+.team {
+	position: relative;
+	background: #c0afaa url("../img/bg/team.jpg") center center no-repeat;
+	background-size: cover;
+}
+
+.team__section {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	background-color: rgba(#2f3234, 0.93);
+	padding: 50px 20px 0 70px;
+	color: #ffffff;
+
+	.section__title {
+		margin-bottom: 48px;
+	}
+}
+
+.team-accord__item{
+	margin-bottom: 40px;
+
+	&_active {
+		.team-accord__trigger {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+.team-accord__trigger {
+	color: #ffffff;
+	font-size: 14px;
+	text-decoration: none;
+	position: relative;
+	text-transform: uppercase;
+  font-family: 'Gagalin', arial, sans-serif;
+  transition: 0.3s;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -19px;
+		top: 8px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 0px solid transparent;
+		transform: rotate(0deg);
+		transition: 0.3s;
+	}
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+.team-accord__content {
+	@extend %clearfix;
+	padding-top: 15px;
+	display: none;
+}
+
+.team-accord__pic {
+	float: left;
+	text-align: center;
+	width: 30%;	
+	max-width: 150px;
+	height: 100px;	
+	overflow: hidden;
+}
+
+.team-accord__img {
+	border-radius: 50%;
+	display: inline-block;
+	height: 100px;	
+	width: 100px;
+	background: #000 url("../img/content/leto.jpg") center center no-repeat;
+	background-size: cover;
+}
+
+.team-accord__text {
+	float: left;
+	width: 70%;	
+}
+
+.team-accord__title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.team-accord__text-content {
+	font-weight: 300;
+	font-size: 14px;
+}

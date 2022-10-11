@@ -1,0 +1,179 @@
+.about {
+	background: #80898e url("../img/bg/about.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding-top: 13px;
+}
+
+.head__container {
+	@extend %clearfix;
+}
+
+.header__left {
+	width: 32%;
+	float: left;
+}
+
+.header__right {
+	width: 68%;
+	padding-top: 13px;
+	float: left;
+  position: relative;
+  padding-right: 112px;
+}
+
+.nav {
+  vertical-align: middle;
+}
+
+.order-link {
+	width: 15%;	
+	display: inline-block;	
+	vertical-align: middle;	
+	padding-top: 9px;	
+	padding-bottom: 9px;	
+	background-color: $orange;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 13px;
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;	
+	right: 0;	
+	top: 12px;
+
+	&:hover {
+		background-color: darken($orange, 5%);
+		transform: scale(1.05);
+		transition: 0.3s;
+	}
+}
+
+.nav__list {
+	width: 100%;	
+	margin: 0;	
+	padding: 0;	
+	text-align: justify;
+	padding-top: 2px;	
+
+	&:after {
+		content: "";
+		width: 100%;	
+		height: 0;	
+		display: inline-block;	
+	}
+}
+
+.nav__item {
+	display: inline-block;
+	white-space: nowrap;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 4px;	
+		height: 4px;	
+		border-radius: 50%;
+		background-color: #fff;
+		vertical-align: middle;	
+		margin-left: 15px;	
+	}
+
+	&:last-child {
+		&:after {
+			content: none;
+		}
+	}
+}
+
+.nav__link {
+	display: inline-block;	
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 13px;
+	vertical-align: middle;	
+
+	&:hover {
+		text-decoration: underline;
+		transition: 10.3s;
+	}
+}
+
+.hero__content {
+	@extend %clearfix;
+}
+
+.hero__left {
+	float: left;
+	width: 50%;
+	position: relative;
+}
+
+.hero__right {
+	float: left;
+	width: 50%;
+	padding-top: 115px;
+}
+
+.hero__drops {
+	position: absolute;
+	top: 65px;
+}
+
+.hero__img {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.hero__text {
+  font-size: 65px;
+  color: white;
+  font-family: 'Lifehack', Arial, sans-serif;
+  text-transform: lowercase;
+  line-height: 1em;
+}
+
+.down__arrow {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	transition: 0.3s;
+	margin-left: -30px;
+
+	svg {
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transition: .3s;
+		transition: .3s;
+		margin-left: -15px;
+		margin-top: -15px;
+	}
+
+
+	&:hover {
+		svg {
+			margin-left: -18px;
+			margin-top: -30px;
+			width: 36px;
+			height: 36px;
+		}
+	}
+}

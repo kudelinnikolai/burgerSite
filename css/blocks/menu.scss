@@ -1,0 +1,110 @@
+.menu {
+	background: #b5babd url("../img/bg/menu.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+
+	.section__title {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+	}
+}
+
+.menu-accord {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	@extend %clearfix;
+	z-index: 2;
+
+	&:last-child {
+		.menu-accord__content-text {
+		  padding: 60px 60px 60px 30px;
+		}
+	}
+}
+
+.menu-accord__item {
+	float: left;
+	height: 100%;
+	@extend %clearfix;
+
+	&:hover {
+		.menu-accord__trigger-text {
+			color: $yellow;
+		}
+	}
+
+	&_active {
+		.menu-accord__trigger-text {
+			color: $yellow;
+		}
+
+		.menu-accord__content {
+			width: 550px;
+		}
+
+	}
+}
+
+.menu-accord__trigger {
+	height: 100%;
+	display: block;
+	width: 80px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: rgba(#2f3234, 0.93);
+	position: relative;
+	float: left;
+}
+
+ .menu-accord__trigger_1{
+	background-image: url("../img/bg/meat.jpg");
+ }
+
+ .menu-accord__trigger_2{
+	background-image: url("../img/bg/vegan.jpg");
+ }
+
+ .menu-accord__trigger_3{
+	background-image: url("../img/bg/diet.jpg");
+ }
+
+.menu-accord__trigger-text {
+	font-size: 40px;
+	color: #ffffff;
+	white-space: nowrap;
+	text-transform: uppercase;
+  font-family: 'Gagalin', arial, sans-serif;
+
+	position: absolute;
+	top: 50%;
+	height: 80px;
+	margin-top: -40px;
+	width: 650px;
+	margin-left: -325px;
+	left: 50%;
+	transform: rotate(-90deg);
+	text-align: center;	
+	padding-top: 10px;
+	transition: 0.3s;
+}
+
+.menu-accord__content {
+	background-color: rgba(47, 50, 52, 0.93);
+	height: 100%;
+	color: #ffffff;
+	float: left;
+	overflow: hidden;
+	width: 0;
+	transition: width 0.3s;
+}
+
+.menu-accord__content-text {
+	width: 550px;
+	padding: 60px 30px;
+	font-size: 14px;
+	line-height: 1.8;
+}
